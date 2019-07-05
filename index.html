@@ -17,10 +17,21 @@
 
         <form id="myReg">
             <h1>Qeydiyyat formu</h1>
-            <input type="text" name="Ad" id="ad" placeholder="Adınızı daxil edin">
-            <input type="text" name="Soyad" id="soyad" placeholder="Soyadınızı daxil edin">
-            <input type="text" name="E-mail" id="email" placeholder="E-mailinizi daxil edin">
-            <input type="text" name="Şəhər" id="sheher" placeholder="Yaşadığınız şəhəri daxil edin">
+            <input  type="text" name="Ad" id="ad" placeholder="Adınızı daxil edin" required pattern="\S+"/>
+            <input  type="text" name="Soyad" id="soyad" placeholder="Soyadınızı daxil edin" required pattern="\S+"/>
+            <input  type="email" name="E-mail" id="email" placeholder="E-mailinizi daxil edin" required pattern="\S+"/>
+            <!-- <input required type="text" name="Şəhər" id="sheher" placeholder="Yaşadığınız şəhəri daxil edin"> -->
+            <select id="sheher">
+                <option value="Şəhər qeyd edilməyib">
+                    Şəhəri seçin
+                </option>
+                <option value="Bakı">
+                    Bakı
+                </option>
+                <option value="Naxçıvan">
+                    Naxçıvan
+                </option>
+            </select>
             <input type="button" id="tesdiq" value="Qeydiyyat">
         </form>
     </div>

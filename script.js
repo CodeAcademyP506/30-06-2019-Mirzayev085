@@ -23,14 +23,35 @@ function yoxla() {
 $("#tesdiq").click(function () {
 
 
-    yoxla();
 
+
+
+
+    yoxla();
+    
 
     var ad = $("#ad").val();
     var soyad = $("#soyad").val();
     var email = $("#email").val();
     var sheher = $("#sheher").val();
     var redakte = ("<input type='checkbox' name='sil'></input>");
+
+          
+        if (ad==null || ad==""){  
+          document.getElementById("ad").style.border = "1px solid red"
+          return false;  
+        
+        } else if( soyad==null || soyad=="") {
+            document.getElementById("soyad").style.border = "1px solid red"
+          return false; 
+        } else if(email==null || email=="") {
+            document.getElementById("email").style.border = "1px solid red"
+          return false; 
+        }
+        
+
+
+
 
     formObj = { ad: ad, soyad: soyad, email: email, sheher: sheher, redakte: redakte };
     formArr.push(formObj);
@@ -39,8 +60,8 @@ $("#tesdiq").click(function () {
 
     addMyCell(ad, soyad, email, sheher, redakte);
 
-
 })
+
 
 function addMyCell(ad, soyad, email, sheher, redakte) {
 
@@ -59,6 +80,9 @@ function addMyCell(ad, soyad, email, sheher, redakte) {
     emailCell.innerHTML = email;
     sheherCell.innerHTML = sheher;
     redakteCell.innerHTML = redakte;
+
+
+
 }
 
 
@@ -67,13 +91,15 @@ $("#sil").click(function () {
     $(".myTable table tbody").find('input[name=sil]').each(function () {
         if ($(this).is(":checked")) {
             $(this).parents("tr").remove()
-            
+
         }
     })
+
+
 })
 
 
-$("#bazasil").click(function(){
+$("#bazasil").click(function () {
     localStorage.clear();
 })
 

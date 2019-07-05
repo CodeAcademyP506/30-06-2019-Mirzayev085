@@ -72,16 +72,16 @@ h1 {
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.432);
 }
 
-#sheher {
+select {
     padding-left: 5px;
-    width: 250px;
-    height: 30px;
+    width: 255px;
+    height: 35px;
     margin: 3px;
     border: 0px solid rgba(231, 77, 60, 0.356);
     border-radius: 30px;
 }
 
-#sheher:hover {
+select:hover {
     box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.432);
 }
 
@@ -195,3 +195,4 @@ td{
     text-align: center;
     color: white;
 }
+
